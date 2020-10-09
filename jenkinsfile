@@ -1,0 +1,20 @@
+pipeline {
+  agent { docker { image 'python:3.7.2' } }
+  enviroment {
+      FLASK_APP=covid_stats.py
+  }
+  stages {
+    stage('prepare enviroment') {
+      steps {
+        git "https://github.com/Sylbris/covid_peaks.git"  
+        sh 'pip install -r requirements.txt'
+      }
+    }
+  
+    stage('run') { 
+      steps{
+        sh "flask run"
+      }    
+    }
+  }
+}

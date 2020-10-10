@@ -107,4 +107,4 @@ def deathspeak():
     return jsonify({'country' : country , 'method' : 'deathsPeak' , 'date' : str(lst3[lst2.index(max(lst2))+1]) , 'value' : max(lst2)}) #return a json format with the details requested
     
 if __name__== "__main__" : 
-    app.run(host="localhost" , port=5005)
+    app.run()

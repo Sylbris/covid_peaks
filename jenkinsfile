@@ -16,7 +16,7 @@ pipeline {
     stage('run') { 
       steps{
         script {
-          sh "flask run &"
+          sh "flask run -h localhost -p 5005 &"
           lst=COUNTRIES.split(",")
           for(item in lst){
             sh "curl localhost:5005/${METHOD}?country=${item}"

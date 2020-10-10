@@ -12,4 +12,8 @@ A python script that uses an external API to determine COVID statistics.
 
 # Usage
 
-|Run the jenkins job.
+Run the jenkins job.
+
+# Comments
+
+To avoid collisions with jenkins the script runs on port 5005.

@@ -19,7 +19,7 @@ pipeline {
           sh "flask run &"
           lst=COUNTRIES.split(",")
           for(item in lst){
-            sh "curl localhost:5000/${METHOD}?country=${item}"
+            sh "curl localhost:5005/${METHOD}?country=${item}"
           }
         }
         

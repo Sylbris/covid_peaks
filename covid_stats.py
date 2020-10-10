@@ -29,7 +29,7 @@ def dict_val_to_list(dict): #method to convert dictionary to list of its values
 def handle_exception(e):
     response=e.get_response()
     response.data = json.dumps({
-        
+
     })
     response.content_type="application/json"
     return response
@@ -107,4 +107,4 @@ def deathspeak():
     return jsonify({'country' : country , 'method' : 'deathsPeak' , 'date' : str(lst3[lst2.index(max(lst2))+1]) , 'value' : max(lst2)}) #return a json format with the details requested
     
 if __name__== "__main__" : 
-    app.run()#host="localhost" , port=8080, debug=true)
+    app.run(host="localhost" , port=5005)

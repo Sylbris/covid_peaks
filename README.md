@@ -17,3 +17,7 @@ Run the jenkins job.
 # Comments
 
 To avoid collisions with jenkins the script runs on port 5005.
+
+# Testing
+
+run test.py

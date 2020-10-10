@@ -34,16 +34,6 @@ def handle_exception(e):
     response.content_type="application/json"
     return response
 
-
-@app.route('/quit') #method to stop the service
-def quit():
-    shutdown_hook = request.environ.get('werkzeug.server.shutdown')
-    if shutdown_hook is not None:
-        shutdown_hook()
-        return "Bye"
-    return "No shutdown hook"
-
-
 @app.route("/status")
 def status_check():
     status=requests.get('https://disease.sh/')
